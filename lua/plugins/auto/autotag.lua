@@ -1,7 +1,7 @@
 return {
   'windwp/nvim-ts-autotag',
   lazy = true,
-  ft = { 'html', 'xml' },
+  ft = { 'html', 'xml', 'markdown' },
   config = function()
     require('nvim-ts-autotag').setup()
   end
