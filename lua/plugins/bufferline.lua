@@ -1,12 +1,13 @@
 return {
   'akinsho/bufferline.nvim',
   lazy = false,
-  priorty = 930,
+  priorty = 1000,
   config = function()
     require('bufferline').setup({
       options = {
         separator_style = 'slant',
-        show_buffer_icons = false
+        show_buffer_icons = false,
+        diagnostics = 'nvim_lsp'
       }
     })
   end,
