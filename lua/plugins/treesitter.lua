@@ -2,7 +2,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'master',
   lazy = false,
-  priority = 900,
+  priority = 1000,
   build = ':TSUpdate',
   config = function()
     require('nvim-treesitter.configs').setup({

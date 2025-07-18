@@ -18,5 +18,8 @@ option.relativenumber = true
 option.clipboard      = 'unnamedplus'
 option.undodir        = '/home/Michael/.cache/nvim/undo/'
 option.signcolumn     = 'yes:1'
+option.smoothscroll   = true
 
-vim.g.mapleader       = ' '
+vim.g.mapleader      = ' '
+vim.g.maplocalleader = ','
+
