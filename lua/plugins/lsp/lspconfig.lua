@@ -13,7 +13,7 @@ return {
     })
 
     local lsp_servers = {
-      'pyright',
+      'basedpyright',
       'lua_ls',
       'csharp_ls',
       'nixd',
