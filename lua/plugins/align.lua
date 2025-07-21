@@ -1,9 +1,9 @@
 return {
-  'echasnovski/mini.align',
-  version = '*',
-  lazy = false,
-  priority = 50,
+  'junegunn/vim-easy-align',
+  event = 'VeryLazy',
   config = function()
-    require('mini.align').setup()
+    local set = vim.keymap.set
+    set('x', 'ga', '<Plug>(EasyAlign)')
+    set('v', 'ga', '<Plug>(EasyAlign)')
   end
 }

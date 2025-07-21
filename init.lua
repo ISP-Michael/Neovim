@@ -12,11 +12,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
+vim.loader.enable()
 require('core.options')
 require('core.indent')
 require('core.keymap')
-require('lazy').setup('plugins')
 require('core.diagnostic')
+require('lazy').setup('plugins', {
+  performance = {
+    enabled = true,
+    path = vim.fn.stdpath('cache') .. '/lazy/cache',
+    reset_on_startup = 'always'
+  },
+  reset_packpath = true,
+  rtp = {
+    reset = false
+  }
+})
 require('core.O_o')
 require('core.py')
 

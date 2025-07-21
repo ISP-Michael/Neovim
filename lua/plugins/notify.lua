@@ -6,7 +6,7 @@ return {
     require('notify').setup({
       fps = 60,
       level = 2,
-      stages = 'fade',
+     stages = 'fade',
       render = 'minimal'
     })
     vim.notify = require('notify')
