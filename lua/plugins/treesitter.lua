@@ -4,6 +4,9 @@ return {
   lazy = false,
   priority = 1000,
   build = ':TSUpdate',
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-textobjects'
+  },
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
@@ -53,10 +56,28 @@ return {
         'vue',
         'xml',
         'yaml',
-        'yuck'
+        'yuck',
+        'qmljs'
       },
       highlight = { enable = true },
-      indent    = { enable = true }
+      indent    = { enable = true },
+      textobjects = {
+        select = {
+          enable = true,
+          lockahead = true,
+          keymaps = {
+            ['af'] = '@function.outer',
+            ['if'] = '@function.inner',
+            ['ac'] = '@class.outer',
+            ['ic'] = '@class.inner'
+          },
+          selection_modes = {
+            ['@parameter.outer'] = 'v',
+            ['@function.outer'] = 'V',
+            ['@class.outer'] = '<C-v>'
+          }
+        }
+      }
     })
   end
 }

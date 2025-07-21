@@ -3,6 +3,26 @@ return {
   lazy = false,
   priority = 600,
   config = function()
-    require('gitsigns').setup()
+    require('gitsigns').setup({
+      on_attach = function(bufnr)
+        local set = vim.keymap.set
+        set(
+          'n',
+          ']c',
+          function()
+            require('gitsigns').next_hunk()
+          end,
+          {buffer = bufnr}
+        )
+        set(
+          'n',
+          '[c',
+          function()
+            require('gitsigns').prev_hunk()
+          end,
+          {buffer = bufnr}
+        )
+      end
+    })
   end
 }

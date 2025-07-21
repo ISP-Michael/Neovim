@@ -15,7 +15,8 @@ vim.api.nvim_create_autocmd({'FileType'}, {
     'nix',
     'markdown',
     'scss',
-    'vim'
+    'vim',
+    'qml'
   },
   callback = function()
     vim.opt_local.tabstop     = 2
