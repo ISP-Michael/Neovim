@@ -72,9 +72,29 @@ return {
             ['ic'] = '@class.inner'
           },
           selection_modes = {
-            ['@parameter.outer'] = 'v',
-            ['@function.outer'] = 'V',
-            ['@class.outer'] = '<C-v>'
+            ['@parameter.outer'] = 'V',
+            ['@function.outer']  = 'V',
+            ['@class.outer']     = 'V'
+          }
+        },
+        move = {
+          enable = true,
+          set_jumps = true,
+          goto_next_start = {
+            [']m'] = '@function.outer',
+            [']]'] = '@class.outer'
+          },
+          goto_next_end = {
+            [']M'] = '@function.outer',
+            [']['] = '@class.outer'
+          },
+          goto_previous_start = {
+            ['[m'] = '@function.outer',
+            ['[['] = '@class.outer'
+          },
+          goto_previous_end = {
+            ['[M'] = '@function.outer',
+            ['[]'] = '@class.outer'
           }
         }
       }
