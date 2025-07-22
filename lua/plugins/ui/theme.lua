@@ -3,7 +3,7 @@ return {
   priority = 1000,
   config = function()
     require('onedark').setup({
-      style = 'darker',
+      style = 'cool',
       code_style = {
         strings   = 'none',
         keywords  = 'bold',
