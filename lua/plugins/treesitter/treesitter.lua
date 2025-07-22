@@ -60,7 +60,12 @@ return {
         'qmljs'
       },
       highlight = { enable = true },
-      indent    = { enable = true },
+      indent    = {
+        enable = true,
+        disable = {
+          'nix'
+        }
+      },
       textobjects = {
         select = {
           enable = true,
