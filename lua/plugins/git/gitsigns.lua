@@ -4,6 +4,12 @@ return {
   priority = 600,
   config = function()
     require('gitsigns').setup({
+      signs = {
+        changedelete = { text = '─' }
+      },
+      signs_staged = {
+        changedelete = { text = '─' }
+      },
       on_attach = function(bufnr)
         local set = vim.keymap.set
         set(
