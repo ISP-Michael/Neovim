@@ -5,7 +5,7 @@ return {
   config = function()
     require('gitsigns').setup({
       signs = {
-        changedelete = { text = '─' }
+        changedelete = { text = '─' },
       },
       signs_staged = {
         changedelete = { text = '─' }

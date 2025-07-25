@@ -1,9 +1,9 @@
 return {
-  'nvim-pack/nvim-spectre',
+  'MagicDuck/grug-far.nvim',
   keys = {
-    { '<leader>s', ':lua require("spectre").toggle()<cr>' }
+    { '<leader>fr', ':GrugFar<cr>' }
   },
   config = function()
-    require('spectre').setup()
+    require('grug-far').setup()
   end
 }

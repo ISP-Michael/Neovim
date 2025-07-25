@@ -1,10 +1,13 @@
 return {
   'stevearc/conform.nvim',
   event = 'BufWritePre',
+  ft = {
+
+  },
   config = function()
     require('conform').setup({
       formatters_by_ft = {
-        python = { 'black', 'isort' }
+
       },
       format_on_save = {
         timeout_ms = 500,
