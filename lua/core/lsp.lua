@@ -22,3 +22,4 @@ enable('vimls')
 enable('sqls')
 
 local config = vim.lsp.config
+

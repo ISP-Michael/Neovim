@@ -1,9 +1,8 @@
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
-  cmd = 'LoggleTerm',
   config = true,
   keys = {
-    { '<C-`>', ':ToggleTerm<cr>' }
+    { '<leader>tt', function() require('toggleterm').toggle() end }
   }
 }

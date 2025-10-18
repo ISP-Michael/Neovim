@@ -11,12 +11,16 @@ vim.api.nvim_create_autocmd({'FileType'}, {
     'hyprlang',
     'json',
     'jsonc',
+    'javascript',
+    'typescript',
     'lua',
     'nix',
     'markdown',
     'scss',
     'vim',
-    'qml'
+    'qml',
+    'toml',
+    'dosini'
   },
   callback = function()
     vim.opt_local.tabstop     = 2

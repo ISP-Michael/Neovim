@@ -8,8 +8,8 @@ return {
         style = 'deep',
         code_style = {
           strings   = 'none',
-          keywords  = 'bold',
-          comments  = 'none',
+          keywords  = 'bold,italic',
+          comments  = 'italic',
           functions = 'bold',
           variables = 'none'
         }
