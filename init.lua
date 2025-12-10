@@ -11,6 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+if vim.g.neovide ~= nil then
+  vim.opt.autochdir = true
+end
+
 
 vim.loader.enable()
 require('core.options')
@@ -30,4 +34,26 @@ require('lazy').setup('plugins', {
 })
 require('core.O_o')
 require('core.py')
+require('autocmds.python_template')
+require('autocmds.typescript_template')
+
+
+function Insert_template_based_on_filetype()
+  local filetype = vim.bo.filetype
+  if filetype == 'python' then
+    require('autocmds.python_template').insert()
+  elseif filetype == 'typescript' then
+    require('autocmds.typescript_template').insert()
+  else
+    print("Для текущего filetype (" .. filetype .. ") шаблон не определен.")
+  end
+end
+
+vim.api.nvim_set_keymap('n', '<Leader>pt',
+  [[<Cmd>lua Insert_template_based_on_filetype()<CR>]],
+  {
+    noremap = true,
+    silent = true
+  }
+)
 

@@ -28,6 +28,7 @@ return {
         'gitignore',
         'go',
         'gomod',
+        'haskell',
         'html',
         'http',
         'hyprlang',
@@ -63,7 +64,8 @@ return {
       indent    = {
         enable = true,
         disable = {
-          'nix'
+          'nix',
+          'python'
         }
       },
       textobjects = {

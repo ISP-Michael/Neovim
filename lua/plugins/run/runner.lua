@@ -14,7 +14,8 @@ return {
         typescript = 'node',
         rust = 'cargo run',
         cpp = 'g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
-        cs = 'dotnet run'
+        cs = 'dotnet run',
+        go = 'go run'
       },
       mode = 'toggleterm'
     })

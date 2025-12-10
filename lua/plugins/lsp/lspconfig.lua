@@ -18,7 +18,8 @@ return {
       'csharp_ls',
       'nixd',
       'clangd',
-      'emmet_ls'
+      'emmet_ls',
+      'gopls'
     }
 
     for _, server in ipairs(lsp_servers) do

@@ -2,7 +2,7 @@ local set = vim.keymap.set
 set('n', '<C-s>',  ':w<CR>')
 set('n', '<C-q>',  ':q<CR>')
 set('n', '<Esc>',  ':nohlsearch<cr>')
-set('t', '<C-w>k', '<C-\\><C-n><C-w>k')
+-- set('t', '<C-w>k', '<C-\\><C-n><C-w>k')
 set(
   'n',
   '<leader>dq',
