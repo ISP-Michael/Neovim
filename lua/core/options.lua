@@ -1,5 +1,5 @@
 local option = vim.opt
-option.mouse = yes
+option.mouse = 'a'
 option.tabstop = 4
 option.wrap = false
 option.number = true
@@ -22,6 +22,4 @@ option.smoothscroll = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
-
--- vim.o.guifont = 'FiraCode_Nerd_Font:h12'
 
