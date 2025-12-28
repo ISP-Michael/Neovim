@@ -11,9 +11,10 @@ return {
       function()
         local fzf = require('fzf-lua')
         local quick_dirs = {
-          '/home/Michael/.config',
-          '/home/Michael/Downloads',
-          '/home/Michael/Projects',
+          '~/.config',
+          '~/Downloads',
+          '~/Projects',
+          '~',
           vim.fn.getcwd(),
           '/etc'
         }
