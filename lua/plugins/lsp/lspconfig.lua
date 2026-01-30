@@ -14,10 +14,10 @@ return {
 
     local lsp_servers = {
       'basedpyright',
-      'lua_ls',
       'csharp_ls',
       'nixd',
       'clangd',
+      'lua_ls',
       'emmet_ls',
       'gopls'
     }
