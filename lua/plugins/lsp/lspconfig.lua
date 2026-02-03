@@ -13,7 +13,8 @@ return {
     })
 
     local lsp_servers = {
-      'basedpyright',
+      'ruff',
+      'ty',
       'csharp_ls',
       'nixd',
       'clangd',
@@ -25,5 +26,49 @@ return {
     for _, server in ipairs(lsp_servers) do
       vim.lsp.enable(server)
     end
+
+    vim.lsp.config('ruff', {
+      init_options = {
+        settings = {
+          hover = {
+            enabled = false
+          }
+        }
+      }
+    })
+
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = '*.py',
+      callback = function()
+        vim.lsp.buf.code_action({
+          context = { only = { 'source.organizeImports' } },
+          apply = true
+        })
+        vim.defer_fn(function()
+          vim.lsp.buf.format({ name = 'ruff' })
+        end, 50)
+      end
+    })
+
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = '*.go',
+      callback = function()
+        vim.lsp.buf.code_action(
+          {
+            context = {
+              only = {
+                'source.organizeImports'
+              }
+            },
+            apply = true
+          }
+        )
+        vim.lsp.buf.format(
+          {
+            async = false
+          }
+        )
+      end
+    })
   end
 }

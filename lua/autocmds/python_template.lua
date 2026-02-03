@@ -1,7 +1,5 @@
 function Insert_python_template()
   local template_text = [[#!/usr/bin/env python3
-
-
 def main() -> None:
     
 

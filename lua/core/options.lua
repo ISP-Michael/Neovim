@@ -19,6 +19,7 @@ option.clipboard = 'unnamedplus'
 option.undodir = '/home/Michael/.cache/nvim/undo/'
 option.signcolumn = 'yes:1'
 option.smoothscroll = true
+option.fillchars = { eob = ' ' }
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','

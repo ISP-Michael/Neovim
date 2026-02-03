@@ -17,6 +17,7 @@ end
 
 
 vim.loader.enable()
+-- vim.cmd('colorscheme flatwhite')
 require('core.options')
 require('core.indent')
 require('core.keymap')
