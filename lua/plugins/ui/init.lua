@@ -1,3 +1,3 @@
 return {
-  { import = 'plugins.ui.themes.lackluster' }
+  { import = 'plugins.ui.themes.ayu' }
 }

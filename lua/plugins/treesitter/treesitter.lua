@@ -60,7 +60,9 @@ return {
         'yuck',
         'qmljs'
       },
-      highlight = { enable = true },
+      highlight = {
+        enable = true
+      },
       indent    = {
         enable = true,
         disable = {

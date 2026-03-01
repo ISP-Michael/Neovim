@@ -17,7 +17,7 @@ return {
           {
             'mode',
             separator = {
-              left = '',
+              left = '',
               right = ''
             },
             right_padding = 2
@@ -41,7 +41,7 @@ return {
           {
             'location',
             separator = {
-              right = ''
+              right = ''
             },
             left_padding = 2
           }
