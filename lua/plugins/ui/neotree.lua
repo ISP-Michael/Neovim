@@ -7,7 +7,29 @@ return {
     'MunifTanjim/nui.nvim'
   },
   keys = {
-    { '<leader>nt', ':Neotree<CR>' }
+    {
+      '<leader>nt',
+      ':Neotree<CR>'
+    }
   },
-  opts = {}
+  config = function()
+    require('neo-tree').setup(
+      {
+        window = {
+          position = 'float',
+          size = 40,
+          popup_options = {
+            border_style = 'rounded',
+            col = '50%',
+            row = '50%',
+            size = {
+              width = '80%',
+              height = '80%',
+            },
+          },
+        },
+      }
+    )
+  end,
 }
+
